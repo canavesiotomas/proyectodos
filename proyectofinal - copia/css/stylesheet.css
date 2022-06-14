@@ -1,0 +1,334 @@
+/*Presets*/
+
+*{
+    
+    margin: 0px;
+    font-family: 'Roboto Slab', serif; 
+    text-decoration: none;
+    box-sizing: content-box;
+}
+
+
+/*Body*/
+
+body{background-color: gray;}
+
+/*Header*/
+#logo{
+    width: 50px; 
+    background-color: #fff;
+    border-radius: 20px ; 
+    padding: 5px;
+    margin: 10px; 
+}
+
+.indexHeader{
+    background-color: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    
+
+}
+g
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 5px;
+    box-sizing: content-box;
+    
+}
+
+span:hover{
+    text-decoration: underline orangered;
+    color: rgb(255, 68, 0);
+}
+
+/*Main*/
+
+a{
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    
+}
+.mainPhoto{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mainPresentation{
+    background-color: transparent;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center; 
+    margin-bottom: 5px; 
+    
+}
+
+.mainIntro{
+    background-color: #151515;;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    text-align: center; 
+    margin-top: 15px;
+    margin-bottom: 5px; 
+    
+}
+
+.h3Main{
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: orangered;
+    text-decoration: initial;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.h3Main:hover{
+    color: rgb(0, 0, 0);
+    transform: translate(5px);
+    
+    
+}
+
+
+.articlePh{
+    height: 50vh;
+    box-sizing: border-box;
+    padding-top: 5px;
+    border-radius: 25px;
+   
+}
+
+.articlePh:hover{
+    filter: opacity(80%);
+}
+
+.articleP{
+    padding: 1vh;
+    
+}
+
+
+.animatedPresentation{
+    animation-name: down;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes down{
+
+    0%{
+
+    }
+
+    50%{
+        transform: translateY(15px);
+    }
+
+
+    100%{
+        transform: scaleY(-1px);
+    }
+
+}
+
+
+.indexPhotos{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-items: center;
+    background-color: #151515
+    
+}
+
+.gallery{
+    width: 25%;
+    padding: 5px;  
+    
+}
+
+.gallery:hover{
+    filter: opacity(60%);
+}
+
+
+/*BackgroundVideo*/
+
+
+#backgroundVideo {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  @media (max-width: 480px) {
+      #backgrounVideo { display: none; }
+      body {
+        background-color:#fff;
+        
+      }
+  }
+
+
+  /*Contact*/
+
+  h2{
+      font-family: sans-serif;
+      font-size: 30px;
+      color: orangered;
+      text-align: center;
+      background-color: #151515;
+      margin-bottom: 15px;
+      margin-top: 10px;
+
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: rgba(255, 68, 0, 0.445);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: orangered;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+
+  }
+
+
+  /*Grids y Responsive*/
+
+  body{
+    width: 100%;
+    height: 100vh;
+}
+
+/*Grid Areas*/
+.border{
+
+    background-color: gray;
+}
+
+
+#gridAreas{
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav presentacion publicidad"
+    "nav servicios publicidad"
+    "nav footer footer"
+    
+    ;  /*3 columnas 4 filas*/
+
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+
+    
+}
+
+
+/*Nombrar Areas*/
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+
+}
+
+section#presentacion{
+    grid-area: presentacion;
+}
+
+section#servicios{
+    grid-area: servicios;
+}
+
+nav{
+    grid-area: nav;
+}
+aside{
+    grid-area: publicidad;
+}
